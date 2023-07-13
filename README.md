@@ -1,0 +1,1 @@
+proof of concept of automating api tests using JavaScript
