@@ -15,7 +15,10 @@
     "@babel/node": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
     "@babel/register": "^7.22.5",
+    "@faker-js/faker": "^8.0.2",
     "chai": "^4.3.7",
+    "eslint": "^8.45.0",
+    "eslint-plugin-mocha": "^10.1.0",
     "mocha": "^10.2.0",
     "supertest": "^6.3.3"
   }
