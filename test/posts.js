@@ -45,7 +45,7 @@ describe('GET /posts/:id', () => {
 })
 
 describe('POST /posts', () => {
-    it.only('should create a new post', async () => {
+    it('should create a new post', async () => {
         const payload = {userId: randomId, title: faker.lorem.sentence(), body: faker.lorem.sentence()}
         const res = await request.post('posts')
                                 .set(headers)

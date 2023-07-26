@@ -1,0 +1,294 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-26T15:13:18.071Z",
+    "end": "2023-07-26T15:13:20.880Z",
+    "duration": 2809,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4f2fbf9a-971e-4b73-8637-91f6672e1f20",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+          "title": "GET /posts",
+          "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
+          "file": "/test/posts.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return a non-empty response body",
+              "fullTitle": "GET /posts should return a non-empty response body",
+              "timedOut": false,
+              "duration": 440,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request.get('posts').end(function (err, res) {\n  (0, _chai.expect)(res.body).to.not.be.empty;\n  done();\n});",
+              "err": {},
+              "uuid": "2c9ba9b4-3c0a-40bf-9e0e-156a6c2bb655",
+              "parentUUID": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return an array",
+              "fullTitle": "GET /posts should return an array",
+              "timedOut": false,
+              "duration": 266,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return request.get('posts').then(function (res) {\n  (0, _chai.expect)(res.body).to.be.an('array');\n});",
+              "err": {},
+              "uuid": "69f02e7e-e427-45be-873e-08505626b1b0",
+              "parentUUID": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return a status code of 200",
+              "fullTitle": "GET /posts should return a status code of 200",
+              "timedOut": false,
+              "duration": 256,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "62e554be-5d6a-463a-b7b9-3b8d2254419c",
+              "parentUUID": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2c9ba9b4-3c0a-40bf-9e0e-156a6c2bb655",
+            "69f02e7e-e427-45be-873e-08505626b1b0",
+            "62e554be-5d6a-463a-b7b9-3b8d2254419c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 962,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "960f7026-2c42-465e-bfae-2a68340ba401",
+          "title": "GET /posts/:id",
+          "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
+          "file": "/test/posts.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return details of the post and response code 200",
+              "fullTitle": "GET /posts/:id should return details of the post and response code 200",
+              "timedOut": false,
+              "duration": 461,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(randomId);\nreturn request.get(\"posts/\".concat(randomId)).then(function (res) {\n  (0, _chai.expect)(res.body).to.not.be.empty;\n  (0, _chai.expect)(res.statusCode).to.equal(OK_200);\n  (0, _chai.expect)(res.body.id).to.equal(randomId);\n});",
+              "err": {},
+              "uuid": "b1a9d733-d33c-42fe-927c-e1c9be79dbec",
+              "parentUUID": "960f7026-2c42-465e-bfae-2a68340ba401",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b1a9d733-d33c-42fe-927c-e1c9be79dbec"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 461,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2b12e219-825e-4824-a594-ca541b898ddd",
+          "title": "POST /posts",
+          "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
+          "file": "/test/posts.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create a new post",
+              "fullTitle": "POST /posts should create a new post",
+              "timedOut": false,
+              "duration": 453,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "7a9f7c51-ca00-4369-80e4-2e15b09e3b21",
+              "parentUUID": "2b12e219-825e-4824-a594-ca541b898ddd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7a9f7c51-ca00-4369-80e4-2e15b09e3b21"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 453,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "330fd2e6-1e78-4b22-86d1-723822be8a8c",
+          "title": "PUT /posts/:id",
+          "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
+          "file": "/test/posts.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should update an existing post",
+              "fullTitle": "PUT /posts/:id should update an existing post",
+              "timedOut": false,
+              "duration": 460,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "a8316a3c-eaf3-4114-9c09-bfa391bc45cf",
+              "parentUUID": "330fd2e6-1e78-4b22-86d1-723822be8a8c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8316a3c-eaf3-4114-9c09-bfa391bc45cf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 460,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0c2ab6b9-4cbd-4759-be9a-5b51cb7c482c",
+          "title": "DELETE /posts/:id",
+          "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
+          "file": "/test/posts.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should delete an existing post",
+              "fullTitle": "DELETE /posts/:id should delete an existing post",
+              "timedOut": false,
+              "duration": 461,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "79cbd33f-3846-4aa0-87e4-f134bb9d5090",
+              "parentUUID": "0c2ab6b9-4cbd-4759-be9a-5b51cb7c482c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "79cbd33f-3846-4aa0-87e4-f134bb9d5090"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 461,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
