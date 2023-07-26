@@ -1,7 +1,9 @@
 import supertest from "supertest";
 import { expect } from "chai";
+import qa from "../config/qa";
+import { faker } from '@faker-js/faker';
 
-const request = supertest('https://jsonplaceholder.typicode.com/');
+const request = supertest(qa.baseUrl);
 const headers = {'Content-type': 'application/json; charset=UTF-8'};
 let randomId = Math.floor(Math.random() * 100) + 1;
 const OK_200 = 200
@@ -43,8 +45,8 @@ describe('GET /posts/:id', () => {
 })
 
 describe('POST /posts', () => {
-    it('should create a new post', async () => {
-        const payload = {userId: randomId, title: "js poc post title", body: "js poc post body"}
+    it.only('should create a new post', async () => {
+        const payload = {userId: randomId, title: faker.lorem.sentence(), body: faker.lorem.sentence()}
         const res = await request.post('posts')
                                 .set(headers)
                                 .send(payload)
@@ -73,7 +75,7 @@ describe('PUT /posts/:id', () => {
 })
 
 describe('DELETE /posts/:id', () => {
-    it.only('should delete an existing post', async () => {
+    it('should delete an existing post', async () => {
         const postId = 29        
         const res = await request.delete(`posts/${postId}`)
         console.log(res.body)
