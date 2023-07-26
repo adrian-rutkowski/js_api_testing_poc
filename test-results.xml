@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.598" tests="7" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-07-26T15:24:02" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="GET /posts" timestamp="2023-07-26T15:24:02" tests="3" file="/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js" time="0.859" failures="0">
+    <testcase name="GET /posts should return a non-empty response body" time="0.346" classname="should return a non-empty response body">
+    </testcase>
+    <testcase name="GET /posts should return an array" time="0.261" classname="should return an array">
+    </testcase>
+    <testcase name="GET /posts should return a status code of 200" time="0.251" classname="should return a status code of 200">
+    </testcase>
+  </testsuite>
+  <testsuite name="GET /posts/:id" timestamp="2023-07-26T15:24:02" tests="1" file="/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js" time="0.439" failures="0">
+    <testcase name="GET /posts/:id should return details of the post and response code 200" time="0.439" classname="should return details of the post and response code 200">
+    </testcase>
+  </testsuite>
+  <testsuite name="POST /posts" timestamp="2023-07-26T15:24:03" tests="1" file="/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js" time="0.426" failures="0">
+    <testcase name="POST /posts should create a new post" time="0.424" classname="should create a new post">
+    </testcase>
+  </testsuite>
+  <testsuite name="PUT /posts/:id" timestamp="2023-07-26T15:24:03" tests="1" file="/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js" time="0.427" failures="0">
+    <testcase name="PUT /posts/:id should update an existing post" time="0.426" classname="should update an existing post">
+    </testcase>
+  </testsuite>
+  <testsuite name="DELETE /posts/:id" timestamp="2023-07-26T15:24:04" tests="1" file="/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js" time="0.445" failures="0">
+    <testcase name="DELETE /posts/:id should delete an existing post" time="0.444" classname="should delete an existing post">
+    </testcase>
+  </testsuite>
+</testsuites>

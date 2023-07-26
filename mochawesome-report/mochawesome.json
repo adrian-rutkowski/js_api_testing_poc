@@ -5,9 +5,9 @@
     "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2023-07-26T15:13:18.071Z",
-    "end": "2023-07-26T15:13:20.880Z",
-    "duration": 2809,
+    "start": "2023-07-26T15:16:16.945Z",
+    "end": "2023-07-26T15:16:19.622Z",
+    "duration": 2677,
     "testsRegistered": 7,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4f2fbf9a-971e-4b73-8637-91f6672e1f20",
+      "uuid": "6f89669f-0d15-4441-be8a-99df89d06069",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+          "uuid": "5fdfee94-fc09-46cb-ab7f-d47df70c4f74",
           "title": "GET /posts",
           "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
           "file": "/test/posts.js",
@@ -38,7 +38,7 @@
               "title": "should return a non-empty response body",
               "fullTitle": "GET /posts should return a non-empty response body",
               "timedOut": false,
-              "duration": 440,
+              "duration": 362,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "request.get('posts').end(function (err, res) {\n  (0, _chai.expect)(res.body).to.not.be.empty;\n  done();\n});",
               "err": {},
-              "uuid": "2c9ba9b4-3c0a-40bf-9e0e-156a6c2bb655",
-              "parentUUID": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+              "uuid": "d2ac38bf-4484-4b12-a3a1-0c0fc5ad2826",
+              "parentUUID": "5fdfee94-fc09-46cb-ab7f-d47df70c4f74",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "should return an array",
               "fullTitle": "GET /posts should return an array",
               "timedOut": false,
-              "duration": 266,
+              "duration": 288,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "return request.get('posts').then(function (res) {\n  (0, _chai.expect)(res.body).to.be.an('array');\n});",
               "err": {},
-              "uuid": "69f02e7e-e427-45be-873e-08505626b1b0",
-              "parentUUID": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+              "uuid": "64e5ef89-186f-4e3c-b7a8-914fd98462b8",
+              "parentUUID": "5fdfee94-fc09-46cb-ab7f-d47df70c4f74",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "should return a status code of 200",
               "fullTitle": "GET /posts should return a status code of 200",
               "timedOut": false,
-              "duration": 256,
+              "duration": 258,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,28 +83,28 @@
               "context": null,
               "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
               "err": {},
-              "uuid": "62e554be-5d6a-463a-b7b9-3b8d2254419c",
-              "parentUUID": "f6bcffae-5051-4593-a8fb-a5fc1f9d70b6",
+              "uuid": "9a3e40bd-835c-4a23-a00e-7644b3e21053",
+              "parentUUID": "5fdfee94-fc09-46cb-ab7f-d47df70c4f74",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2c9ba9b4-3c0a-40bf-9e0e-156a6c2bb655",
-            "69f02e7e-e427-45be-873e-08505626b1b0",
-            "62e554be-5d6a-463a-b7b9-3b8d2254419c"
+            "d2ac38bf-4484-4b12-a3a1-0c0fc5ad2826",
+            "64e5ef89-186f-4e3c-b7a8-914fd98462b8",
+            "9a3e40bd-835c-4a23-a00e-7644b3e21053"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 962,
+          "duration": 908,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "960f7026-2c42-465e-bfae-2a68340ba401",
+          "uuid": "f4137679-34d6-42e3-963c-ebffc0da056d",
           "title": "GET /posts/:id",
           "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
           "file": "/test/posts.js",
@@ -115,7 +115,7 @@
               "title": "should return details of the post and response code 200",
               "fullTitle": "GET /posts/:id should return details of the post and response code 200",
               "timedOut": false,
-              "duration": 461,
+              "duration": 452,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -124,26 +124,26 @@
               "context": null,
               "code": "console.log(randomId);\nreturn request.get(\"posts/\".concat(randomId)).then(function (res) {\n  (0, _chai.expect)(res.body).to.not.be.empty;\n  (0, _chai.expect)(res.statusCode).to.equal(OK_200);\n  (0, _chai.expect)(res.body.id).to.equal(randomId);\n});",
               "err": {},
-              "uuid": "b1a9d733-d33c-42fe-927c-e1c9be79dbec",
-              "parentUUID": "960f7026-2c42-465e-bfae-2a68340ba401",
+              "uuid": "a62b2fa0-7816-40b2-a04c-9156d038f1bb",
+              "parentUUID": "f4137679-34d6-42e3-963c-ebffc0da056d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b1a9d733-d33c-42fe-927c-e1c9be79dbec"
+            "a62b2fa0-7816-40b2-a04c-9156d038f1bb"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 461,
+          "duration": 452,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "2b12e219-825e-4824-a594-ca541b898ddd",
+          "uuid": "5f4660c4-9cbe-4391-8161-0a33d3b8d5fa",
           "title": "POST /posts",
           "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
           "file": "/test/posts.js",
@@ -154,7 +154,7 @@
               "title": "should create a new post",
               "fullTitle": "POST /posts should create a new post",
               "timedOut": false,
-              "duration": 453,
+              "duration": 431,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -163,26 +163,26 @@
               "context": null,
               "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
               "err": {},
-              "uuid": "7a9f7c51-ca00-4369-80e4-2e15b09e3b21",
-              "parentUUID": "2b12e219-825e-4824-a594-ca541b898ddd",
+              "uuid": "afc8a93c-b41f-4632-a7ab-1efa71a99238",
+              "parentUUID": "5f4660c4-9cbe-4391-8161-0a33d3b8d5fa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7a9f7c51-ca00-4369-80e4-2e15b09e3b21"
+            "afc8a93c-b41f-4632-a7ab-1efa71a99238"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 453,
+          "duration": 431,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "330fd2e6-1e78-4b22-86d1-723822be8a8c",
+          "uuid": "72343700-36ae-4000-8156-937a5f2f83d3",
           "title": "PUT /posts/:id",
           "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
           "file": "/test/posts.js",
@@ -193,7 +193,7 @@
               "title": "should update an existing post",
               "fullTitle": "PUT /posts/:id should update an existing post",
               "timedOut": false,
-              "duration": 460,
+              "duration": 437,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -202,26 +202,26 @@
               "context": null,
               "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
               "err": {},
-              "uuid": "a8316a3c-eaf3-4114-9c09-bfa391bc45cf",
-              "parentUUID": "330fd2e6-1e78-4b22-86d1-723822be8a8c",
+              "uuid": "350f6f09-be0b-4f65-991e-bf3981c4f37f",
+              "parentUUID": "72343700-36ae-4000-8156-937a5f2f83d3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a8316a3c-eaf3-4114-9c09-bfa391bc45cf"
+            "350f6f09-be0b-4f65-991e-bf3981c4f37f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 460,
+          "duration": 437,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "0c2ab6b9-4cbd-4759-be9a-5b51cb7c482c",
+          "uuid": "3fe1893a-e85c-444f-9420-d0eead532b1a",
           "title": "DELETE /posts/:id",
           "fullFile": "/Users/adrian/Code/Personal/js_api_testing_poc/test/posts.js",
           "file": "/test/posts.js",
@@ -232,7 +232,7 @@
               "title": "should delete an existing post",
               "fullTitle": "DELETE /posts/:id should delete an existing post",
               "timedOut": false,
-              "duration": 461,
+              "duration": 441,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -241,20 +241,20 @@
               "context": null,
               "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
               "err": {},
-              "uuid": "79cbd33f-3846-4aa0-87e4-f134bb9d5090",
-              "parentUUID": "0c2ab6b9-4cbd-4759-be9a-5b51cb7c482c",
+              "uuid": "87f78bde-bda7-489e-8233-76ed11b10c13",
+              "parentUUID": "3fe1893a-e85c-444f-9420-d0eead532b1a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "79cbd33f-3846-4aa0-87e4-f134bb9d5090"
+            "87f78bde-bda7-489e-8233-76ed11b10c13"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 461,
+          "duration": 441,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
